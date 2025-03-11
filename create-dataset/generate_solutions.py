@@ -46,6 +46,7 @@ def main():
         gpu_memory_utilization=0.9,
         dtype="bfloat16",
         tensor_parallel_size=1,
+        enforce_eager=True,
     )
 
     sampling_params = SamplingParams(
@@ -69,6 +70,7 @@ def main():
         tokenized_prompt = tokenizer.apply_chat_template(
             build_conv(problem), tokenize=False, add_generation_prompt=True
         )
+        print(tokenized_prompt)
 
         responses = llm.generate(tokenized_prompt, sampling_params, use_tqdm=False)
 
