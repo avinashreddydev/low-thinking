@@ -1,0 +1,7 @@
+.vscode
+.env
+.DS_Store
+.venv
+.env.local
+.env.development.local
+.env.test.local
