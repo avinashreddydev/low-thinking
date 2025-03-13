@@ -5,3 +5,12 @@
 .env.local
 .env.development.local
 .env.test.local
+
+# Ignore all __pycache__ in all subdirectories
+__pycache__/
+**/__pycache__/
+
+
+job.slurm
+
+run.sh
